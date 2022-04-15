@@ -1,0 +1,15 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float num,square_root;
+    cout<<"enter a number"<<endl;
+    cin>>num;
+    
+    square_root=sqrt(num);
+    cout<<"the square root of"<<num<<"is"<<square_root<<endl;
+
+    return 0;
+}
