@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float a,b,total,avg;
+    cout<<"enter first number"<<endl;
+    cin>>a;
+
+    cout<<"enter second number"<<endl;
+    cin>>b;
+
+    total=a+b;
+    avg=total/2;
+
+    cout<<"the sum of"<<a<<"+"<<b<<"="<<total<<endl;
+    cout<<"the average of"<<a<<","<<b<<"="<<avg<<endl;
+
+    return 0;
+}
