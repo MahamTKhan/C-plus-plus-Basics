@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"FOR LOOP IN C++"<<endl;
+    int start;
+    int end;
+    cout<<"enter initial value"<<endl;
+    cin>>start;
+    cout<<"enter final value"<<endl;
+    cin>>end;
+    int i;
+    for (i=start;i<=end;i++)
+    {
+        
+        cout<<i<<endl;
+    
+    }
+
+    return 0; 
+}
