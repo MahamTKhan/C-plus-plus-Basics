@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+ {
+    cout<<"DO-WHILE LOOP IN C++"<<endl;
+    int start;
+    int end;
+    cout<<"enter initial value"<<endl;
+    cin>>start;
+    cout<<"enter final value"<<endl;
+    cin>>end;
+    int i=start;
+
+    do{
+        cout<<i<<endl;
+        i++;
+    }while (i<end);
+
+    return 0;
+ }
