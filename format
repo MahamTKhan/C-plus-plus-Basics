@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    cout<<"Programmer:Maham Khan"<<endl;
+    cout<<"           House #123,Block-3,Gulshanr"<<endl;
+    cout<<"           Karachi ,Pakistan ,796096"<<endl<<endl<<endl;
+    cout<<"TELEPHONE:0123445546"<<endl<<endl;
+
+    return 0;
+}
