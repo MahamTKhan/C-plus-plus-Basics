@@ -1,0 +1,66 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+//base or primary class
+
+class Base{
+    int data1;
+    public:
+    int data2;
+    void setdata();
+    int getdata1();
+    int getdata2();
+
+};
+
+// initializing class Base functions
+
+void Base :: setdata(void){
+    data1=10;
+    data2=20;
+}
+
+int Base :: getdata1(){
+    return data1;
+}
+
+int Base :: getdata2(){
+    return data2;
+}
+
+// derived or secondary class that is derived from class Base
+
+class Derived : public Base{
+    int data3;
+    public:
+    void process();
+    void display();
+};
+
+//initializing functions of class Derived
+
+void Derived :: process(){
+    data3=data2 * getdata1();
+}
+
+void Derived :: display(){
+    cout<<"value of data1 "<<getdata1()<<endl;
+    cout<<"value of data2 "<<data2<<endl;
+    cout<<"value of data3 "<<data3<<endl;
+
+}
+int main(){
+
+    // making an object for Derived class
+
+    Derived der;
+
+    // functions calling
+
+    der.setdata();
+    der.process();
+    der.display();
+    
+    return 0;
+}
