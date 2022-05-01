@@ -1,0 +1,81 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class simple_calculator{
+    protected:
+    float num1;
+    float num2;
+    char operation;
+    void set_num(){
+        cout<<"enter first number"<<endl;
+        cin>>num1;
+        cout<<"enter second number"<<endl;
+        cin>>num2;
+    }
+    void simple_cal_function(){
+        cout<<"enter operation"<<endl;
+        cin>>operation;
+        if (operation=='+'){
+            cout<<num1+num2<<endl;
+        }
+        else if (operation=='-'){
+            cout<<num1-num2<<endl;
+        }
+        else if (operation=='*'){
+            cout<<num1*num2<<endl;
+        }
+        else if (operation=='/'){
+            cout<<num1/num2<<endl;
+        }
+    }
+};
+
+class scientific_calculator : public simple_calculator{
+     protected:
+     int num;
+     int function;
+     void get_num(){
+         cout<<"enter a number"<<endl;
+         cin>>num;
+     }
+     void scietific_cal_function(){
+         cout<<"enter 1 for sin"<<endl;
+         cout<<"enter 2 for cos"<<endl;
+         cout<<"enter 3 for tan"<<endl;
+         cin>>function;
+
+         switch(function){
+            case(1):
+            cout<<"answer is"<<sin(num)<<endl;
+            break;
+
+            case(2):
+            cout<<"answer is"<<cos(num)<<endl;
+            break;
+
+            case(3):
+            cout<<"the answer is"<<tan(num)<<endl;
+            break;
+         }
+     }
+};
+
+class hybrid_calculator : public scientific_calculator{
+    public:
+    void show(){
+        set_num();
+        simple_cal_function();
+        get_num();
+        scietific_cal_function();
+
+    }
+
+};
+
+int main(){
+    hybrid_calculator obj1;
+    obj1.show();
+    
+    return 0;
+}
