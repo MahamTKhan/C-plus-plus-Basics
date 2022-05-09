@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    float firstnumber;
+    float secondnumber;
+    float temp;
+
+    cout<<"enter first number"<<endl;
+    cout<<"then hit enter"<<endl;
+    cin>>firstnumber;
+
+    
+
+    cout<<"enter second number"<<endl;
+    cout<<"then hit enter"<<endl;
+    cin>>secondnumber;
+
+    
+    cout<<"you input the nummbers as "<<firstnumber<< "and"<<secondnumber<<endl;
+
+    
+    temp=firstnumber;
+    firstnumber=secondnumber;
+    secondnumber=temp;
+
+    
+    cout<<"after swapping the numbers are "<<firstnumber<<"and"<<secondnumber<<endl;
+    
+
+    return 0;
+}    
+
+
+
