@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+//volume of rectangle
+int volume(int l,int b, int h){
+    return l*b*h;
+}
+
+//volume of cylinder
+int volume(float r,float h){
+    return (3.142*r*r*h);
+}
+
+//volume of a cube
+int volume(int s){
+    return s*s*s;
+}
+int main(){
+    cout<<"THIS PROGRAM ILLUSTRATES FUNCTION OVERLOADING"<<endl;
+
+    cout<<"the volume of rectangle with measurements 3,4,5 is "<<volume(3,4,5)<<endl;
+    cout<<"the volume of cylinder with measurements 1,2 is "<<volume(1,2)<<endl;
+    cout<<"the volume of cube with measurements 4 is "<<volume(4)<<endl;
+
+    return 0;
+}
