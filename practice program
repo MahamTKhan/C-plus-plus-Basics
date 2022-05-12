@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+
+    int Total_sales;
+    float State_tax;
+    float Local_tax;
+
+    cout<<"QUESTION # 2 :program that will input total sales that a business generates for a particular month :"<<endl;
+    
+    cout<<"Please input the total sales for the month : "<<endl;
+    cin>>Total_sales;
+
+    cout<<"Please input the state tax percentage in decimal form (.02 for 2%) : "<<endl;
+    cin>>State_tax;
+
+    cout<<"Please input the local tax percentage in decimal form (.02 for 2%) : "<<endl;
+    cin>>Local_tax;
+
+    cout<<setprecision(2)<<fixed<<showpoint<<endl;
+    cout<<"The total sales for the month is $"<<static_cast<float>(Total_sales)<<endl;
+    cout<<"The state tax for the month is $"<<Total_sales*State_tax<<endl;
+    cout<<"The local tax for the month is $"<<Total_sales*Local_tax<<endl;
+    
+
+    return 0;
+}
