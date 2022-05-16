@@ -1,0 +1,27 @@
+#include <fstream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    ifstream dataIn;
+    ofstream dataOut;
+    int quantity;
+    float itemprice;
+    float Totalbill;
+
+    dataIn.open("trasaction.dat");
+    dataOut.open("billout");
+
+    dataOut<<"please input the number of items bought :"<<endl;
+    dataIn>>quantity;
+
+    dataOut<<"please input the total price :"<<endl;
+    dataIn>>itemprice;
+
+    Totalbill=itemprice*quantity;
+    dataOut<<setprecision(2)<<fixed<<showpoint<<endl;
+    dataOut<<"The Total Bill is : $"<<Totalbill<<endl;
+
+    
+    return 0;
+}
