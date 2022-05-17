@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    float salary;
+    float bonus;
+    float years;
+    float totalsalary;
+    float sales;
+    cout<<"enter your  basic salary"<<endl;
+    cin>>salary;
+    cout<<"enter the time span working here"<<endl;
+    cin>>years;
+    if (years<=5){
+        bonus=1000;
+        totalsalary=salary+bonus;
+        cout<<"your total saray is"<<totalsalary<<"RS"<<endl;
+    }else if (years>5){
+        bonus=2000;
+        totalsalary=salary+bonus;
+        cout<<"your total saray is"<<totalsalary<<"RS"<<endl;
+    }
+    cout<<"enter the sales u made here here"<<endl;
+    cin>>sales;
+    if (sales>50000 && sales<100000){
+        cout<<"Your salary now is"<<totalsalary+(0.03*sales);
+    }else if (sales>=1000000){
+        cout<<"Your salary now is"<<totalsalary+(0.06*sales);
+    }
+    return 0;
+}
