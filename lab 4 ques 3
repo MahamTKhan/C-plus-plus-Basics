@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    char year;
+    float gpa;
+    cout<<"what year student are you?"<<endl;
+    cout<<"Enter1 (freshman), 2 (somophore), 3 (junior), or 4 (senior)"<<endl;
+    cin>>year;
+
+    cout<<"Now enter your gpa:"<<endl;
+    cin>>gpa;
+
+    if (gpa>=2.0 && year=='4'){
+        cout<<"it is time to graduate soon"<<endl;
+    }
+    else if (year!='4'||gpa<2.0){
+        cout<<"you need more schooling"<<endl;
+    }
+    
+    return 0;
+}
