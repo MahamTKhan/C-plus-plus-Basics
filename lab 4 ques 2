@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    char programmer;
+    char cplusplus;
+
+    cout<<"Before we consider your application answer the following"<<endl;
+    cout<<"Yes (enter Y) or No (enter N)"<<endl;
+    cout<<"Are you a computer programmer?"<<endl;
+    cin>>programmer;
+
+    if (programmer=='Y'){
+        cout<<"Do you program in C++ ?"<<endl;
+        cin>>cplusplus;
+        if (cplusplus=='Y'){
+            cout<<"You look like a promising candidate for employment"<<endl;
+        }else if (cplusplus=='N'){
+            cout<<"you need to learn C++ before further consideration"<<endl;
+        }else{
+            cout<<"you must Y or N"<<endl;
+        }
+    }
+    else if (programmer=='N'){
+        cout<<"you are currently not qualified for empoloyment"<<endl;
+    }
+    else{
+            cout<<"you must Y or N"<<endl;
+    }
+    return 0;
+}
