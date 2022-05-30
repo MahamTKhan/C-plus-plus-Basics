@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main(){
+
+   int numStudents;
+   int num_of_days;
+   float numHours, total, average,mean;
+   int student,day = 0; 
+
+   cout << "This program will find the average number of hours a day" << " that a student spent programming over a long weekend\n\n";
+   cout << "How many students are there ?" << endl;
+   cin >> numStudents; 
+   cout << "How many days you want to work ?" << endl;
+   cin >> num_of_days; 
+   
+   for(student = 1; student <= numStudents; student++)
+   {
+   total = 0;
+   for(day = 1; day <= num_of_days; day++)
+   {
+   
+   cout << "Please enter the number of hours worked by student " << student <<" on day " << day << "." << endl;
+   cin >> numHours;
+   mean = static_cast<float>(total);
+   total = total + numHours;
+   }
+   average = total / num_of_days;
+   cout << endl;
+   cout << "The average number of hours per day spent programming by "<< "student " << student << " is " << average<< endl 
+   << endl << endl;
+   }
+   return 0;
+}
