@@ -1,0 +1,55 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+const double PI = 3.14;
+const double RATE = 0.25;
+void findArea(float, float&);
+void findCircumference(float, float&);
+
+int main(){
+    
+    cout << fixed << showpoint << setprecision(2);
+    float radius = 12;
+
+    cout <<" Main function outer block" << endl;
+    cout <<" PI,RATE and radius are active here" << endl << endl;
+    {
+        float area;
+        cout <<" Main function first inner block" << endl;
+        cout <<" PI,RATE,radius and area are active here" << endl << endl;
+        area=PI*radius*radius;
+        cout<<"the radius = "<<radius<<endl;
+        cout<<"the area = "<<area<<endl;
+    }
+    {
+        float radius=10;
+        float circumference;
+        cout <<" Main function second inner block" << endl;
+        cout <<" PI,RATE,radius and circumference are active here" << endl << endl;
+        circumference=2*PI*radius;
+        cout<<"the radius = "<<radius<<endl;
+        cout<<"the circumference = "<<circumference<<endl;
+    }
+    {
+        float area;
+        float circumference;
+        cout <<" Main function after all calls" << endl;
+        cout <<" PI,RATE,radius,area and circumference are active here" << endl << endl;
+        findArea(radius,area);
+        findCircumference(radius,circumference);
+    }
+    return 0;
+}
+void findArea(float rad,float &answer){
+    cout<<"AREA FUNCTION:"<<endl;
+    cout<<"PI,RATE,radius and area are active here "<<endl;
+    answer=PI*rad*rad;
+    cout<<"the area = "<<answer<<endl;
+}
+void findCircumference(float length,float &dist){
+    cout<<"CIRCUMFERENCE FUNCTION:"<<endl;
+    cout<<"PI,RATE,radius and circumference are active here "<<endl;
+    dist=2*PI*length;
+    cout<<"the circumference = "<<dist<<endl;
+}
