@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+const double g=9.8;
+
+int main(){
+    float t;
+    float total_t=0;
+    float d;
+    float total_d=0;
+    float b;
+
+    cout<<"enter height of bridge above the water:"<<endl;
+    cin>>b;
+    cout<<"enter time of travel:"<<endl;
+    cin>>t;
+
+    for(int i=0;i<=t;i++){
+        
+        d=0.5*g*i*i;
+        total_d=total_d+d;
+        cout<<setw(6)<<"time fallen in "<<i<<"  sec"<<setw(12)<<" and distance fallen in "<<d<<endl;
+        total_t+=1;
+    }
+    if (total_d>b){
+        cout<<"WARNING:PLEASE ENTER A VALID DATA"<<endl;
+    }
+    else{
+        cout<<"PROGRAM EXECUTED SUCCESFULLY"<<endl;
+    }
+    return 0;
+}
