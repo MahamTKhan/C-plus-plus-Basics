@@ -1,0 +1,25 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+const int year=3;
+int main(){
+    int no_of_teller;
+    int no_of_absents;
+    int total_absents=0;
+
+    cout<<"how many tellers worked at Nation’s Bank during each of the last three years ?"<<endl;
+    cin>>no_of_teller;
+
+    for (int i=1;i<=no_of_teller;i++){
+        for (int j=1;j<=3;j++){
+            cout<<"how mnay days was teller "<<i<<"eas absent during year "<<j<<endl;
+            cin>>no_of_absents;
+            total_absents=total_absents+no_of_absents;
+            
+        }  
+        cout<<"tellers were absent for "<<total_absents<<" days out of 3 years"<<endl;
+    }
+    
+    return 0;
+}
