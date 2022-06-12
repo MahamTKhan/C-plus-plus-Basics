@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class Hello
+{
+private:
+	 static int number;
+public:
+	Hello()
+	{
+		number++;
+	}
+	int get_num()
+	{
+		return number;
+	}
+};
+
+int Hello::number = 0;
+int main()
+{
+	Hello h1,h2, h3, h4,h5;
+
+	cout<<"Number is "<<h1.get_num() <<endl;
+	cout<<"Number is "<<h2.get_num() <<endl;
+	cout<<"Number is "<<h3.get_num() <<endl;
+	cout<<"Number is "<<h4.get_num() <<endl;
+	return 0;
+}
