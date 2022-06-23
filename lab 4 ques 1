@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    cout<<setw(6)<<"no of shirts"<<setw(12)<<"discount"<<endl;
+    cout<<setw(6)<<"5-10"<<setw(15)<<"10%"<<endl;
+    cout<<setw(7)<<"10-15"<<setw(14)<<"15%"<<endl;
+    cout<<setw(7)<<"15-20"<<setw(14)<<"20%"<<endl;
+
+    int no_of_shirts;
+    float price;
+    cout<<"how many shirts?"<<endl;
+    cin>>no_of_shirts;
+    if ((no_of_shirts>=5)||(no_of_shirts<=10)){
+        price=(12*no_of_shirts)-(0.10*12);
+        cout<<"price of 1 shirt is $12 and price of "<<no_of_shirts<<" is "<<price<<endl;
+    }else if ((no_of_shirts>10)||(no_of_shirts<=15)){
+        price=(12*no_of_shirts)-(0.15*12);
+        cout<<"price of 1 shirt is $12 and price of "<<no_of_shirts<<" is "<<price<<endl;
+    }else if ((no_of_shirts>15)||(no_of_shirts<=20)) {
+        price=(12*no_of_shirts)-(0.20*12);
+        cout<<"price of 1 shirt is $12 and price of "<<no_of_shirts<<" is "<<price<<endl;
+    }else{
+        cout<<"please enter a valid input"<<endl;
+    }
+    return 0;
+}
