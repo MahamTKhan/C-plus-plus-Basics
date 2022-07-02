@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class Number{
+    private:
+    float n;
+
+    public:
+    Number(){
+        n=0;
+    }
+    void get_number(){
+        cout<<"enter a number to test '!' operator overloading "<<endl;
+        cin>>n;
+    }
+    void display_number(){
+        cout<<"the number is "<<n<<endl;
+    }
+    bool operator!(){
+        n=!n;
+    }
+};
+int main(){
+    Number o1;
+    o1.get_number();
+    o1.display_number();
+
+    !o1;
+    o1.display_number();  
+    return 0;
+}
