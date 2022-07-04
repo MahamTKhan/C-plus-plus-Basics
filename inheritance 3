@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Animal{
+    private:
+    string colour;
+    protected:
+    string type;
+
+    public:
+    void setcolour(string c){
+        colour=c;
+    }
+    string getcolor(){
+        return colour;
+    }
+    void sleep(){
+        cout<<"i sleep"<<endl;
+    }
+};
+class Dog : public Animal{
+    public:
+    void settype(string t){
+        type=t;
+    }
+    void display(string c){
+        cout<<"my type is "<<type<<endl;
+        cout<<"my colour is "<<c<<endl;
+    }
+};
+int main(){
+    Dog d1;
+    d1.setcolour("blue");
+    d1.sleep();
+    d1.settype("labrador");
+    d1.display(d1.getcolor());
+    return 0;
+}
